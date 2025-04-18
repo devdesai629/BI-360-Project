@@ -1,0 +1,25 @@
+├── 📁 Supply Chain
+│   ├── Forecast Qty.dax
+│   │   -- See full VAR logic in main dataset
+│   ├── Net Error.dax
+│   │   -- Net Error = [Forecast Qty]- 'Key Measures'[Sales Qty]
+│   ├── Net Error %.dax
+│   │   -- Net Error % = DIVIDE([Net Error], [Forecast Qty],0)
+│   ├── Net Error LY.dax
+│   │   -- Net Error LY = CALCULATE([Net Error], SAMEPERIODLASTYEAR(dim_date[date]))
+│   ├── ABS Error.dax
+│   │   -- See full nested SUMX logic in main dataset
+│   ├── ABS Error %.dax
+│   │   -- ABS Error % = DIVIDE('Key Measures'[ABS Error],[Forecast Qty],0)
+│   ├── ABS Error LY.dax
+│   │   -- ABS Error LY = CALCULATE('Key Measures'[ABS Error], SAMEPERIODLASTYEAR(dim_date[date]))
+│   ├── Forecast Accuracy %.dax
+│   │   -- Forecast Accuracy % = IF('Key Measures'[ABS Error %]<>BLANK(),1-'Key Measures'[ABS Error %],BLANK())
+│   ├── Forecast Accuracy % LY.dax
+│   │   -- Forecast Accuracy % LY = CALCULATE([Forecast Accuracy %], SAMEPERIODLASTYEAR(dim_date[date]))
+│   ├── Risk.dax
+│   │   -- Risk = IF([Net Error]>0, "EI", IF([Net Error]<0,"OOS", BLANK))
+│   ├── Freight Cost $.dax
+│   │   -- Freight Cost $ = SUM(fact_actuals_estimates[freight_cost])
+│   └── Manufacturing Cost $.dax
+│       -- Manufacturing Cost $ = SUM(fact_actuals_estimates[manufacturing_cost])

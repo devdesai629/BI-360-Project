@@ -1,0 +1,23 @@
+├── 📁 Finance
+│   ├── NS $.dax
+│   │   -- NS $ = SUM(fact_actuals_estimates[net_sales_amount])
+│   ├── NS $ LY.dax
+│   │   -- NS $ LY = CALCULATE([NS $], SAMEPERIODLASTYEAR(dim_date[date]))
+│   ├── Operational Expense $.dax
+│   │   -- Operational Expense $ = ('Key Measures'[Ads & Promotions $]+[Other Operational Expense $])*-1
+│   ├── Other Cost $.dax
+│   │   -- Other Cost $ = SUM(fact_actuals_estimates[other_cost])
+│   ├── GM $.dax
+│   │   -- GM $ = [NS $]-'Key Measures'[Total COGS $]
+│   ├── GM % Target.dax
+│   │   -- GM % Target = DIVIDE([GM Target $], SUM(NsGmTarget[ns_target]), 0)
+│   ├── GM % Variance.dax
+│   │   -- GM % Variance = [GM % BM]-[GM %]
+│   ├── Net Profit $.dax
+│   │   -- Net Profit $ = [GM $]+[Operational Expense $]
+│   ├── Net Profit %.dax
+│   │   -- Net Profit % = DIVIDE([Net Profit $], [NS $], 0)
+│   ├── NP % Target.dax
+│   │   -- NP % Target = DIVIDE([NP Target $], SUM(NsGmTarget[ns_target]),0)
+│   └── Total COGS $.dax
+│       -- Total COGS $ = 'Key Measures'[Manufacturing Cost $] + [Freight Cost $] + 'Key Measures'[Other Cost $]

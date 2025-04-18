@@ -1,0 +1,19 @@
+📁 PowerBI-360-DAX
+
+├── 📁 Sales
+│   ├── GS $.dax
+│   │   -- GS $ = SUM(fact_actuals_estimates[gross_sales_amount])
+│   ├── NIS $.dax
+│   │   -- NIS $ = SUM(fact_actuals_estimates[net_invoice_sales_amount])
+│   ├── Sales Qty.dax
+│   │   -- Sales Qty = CALCULATE(SUM(fact_actuals_estimates[Qty]),fact_actuals_estimates[date]<=MAX(LastSalesMonth[LastSalesMonth]))
+│   ├── Quantity.dax
+│   │   -- Quantity = Sum(fact_actuals_estimates[Qty])
+│   ├── RC %.dax
+│   │   -- RC % = DIVIDE([NS $],CALCULATE([NS $],all(dim_market),all(dim_customer),all(dim_product)))
+│   ├── Market Share %.dax
+│   │   -- Market Share % = DIVIDE(SUM(marketshare[sales_$]), SUM(marketshare[total_market_sales_$]), 0)
+
+
+
+

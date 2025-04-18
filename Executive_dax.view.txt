@@ -1,0 +1,17 @@
+├── 📁 Executive
+│   ├── P & L values.dax
+│   │   -- See full SWITCH logic in main dataset
+│   ├── P & L BM.dax
+│   │   -- P & L BM = SWITCH(TRUE(), SELECTEDVALUE('Set BM'[ID])= 1, [P & L LY], SELECTEDVALUE('Set BM'[ID]) = 2, [P & L Target])
+│   ├── P & L Target.dax
+│   │   -- See full VAR logic in main dataset
+│   ├── P & L Chg.dax
+│   │   -- See full VAR logic in main dataset
+│   ├── P & L Chg %.dax
+│   │   -- See full VAR logic in main dataset
+│   ├── P & L Final Value.dax
+│   │   -- See full SWITCH logic in main dataset
+│   ├── P & L LY.dax
+│   │   -- P & L LY = CALCULATE([P & L values], SAMEPERIODLASTYEAR(dim_date[date]))
+│   └── Selected P & L Row.dax
+│       -- Selected P & L Row = IF(HASONEVALUE('P & L Rows'[Description]),SELECTEDVALUE('P & L Rows'[Description]), "Net Sales")

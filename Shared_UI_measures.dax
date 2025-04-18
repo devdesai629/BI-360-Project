@@ -1,0 +1,9 @@
+├── 📁 Shared_UI
+│   ├── Performance Visual Title.dax
+│   │   -- Performance Visual Title = 'Key Measures'[Selected P & L Row] & " Performace Over Time"
+│   ├── Sales Trend Title.dax
+│   │   -- Sales Trend Title = "NS & GM % For " & SELECTEDVALUE(dim_customer[customer])
+│   ├── Top Bottom N Title.dax
+│   │   -- Top / Bottom N title = "Top / Bottom Products & Customers by " & 'Key Measures'[Selected P & L Row]
+│   └── Last Sales Month Footer.dax
+│       -- Last Sales Month Footer = "Sales data loaded until : " & Format(MAX(LastSalesMonth[LastSalesMonth]), "MMM YY")

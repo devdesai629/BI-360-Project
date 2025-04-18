@@ -1,0 +1,5 @@
+├── 📁 Marketing
+│   ├── Customer Product Filter Check.dax
+│   │   -- Customer / Product Filter Check = ISCROSSFILTERED(dim_product[product]) || ISFILTERED(dim_customer[customer])
+│   └── Other Operational Expense $.dax
+│       -- Other Operational Expense $ = SUM(fact_actuals_estimates[other_operational_expense])
