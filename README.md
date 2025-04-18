@@ -13,6 +13,7 @@ Welcome to my **Power BI 360-Degree Dashboard Project**, a business intelligence
 ## 🚀 Project Objective
 
 To empower Atliq Hardware with **data-driven insights** across five business domains:
+
 **Live Dashboard** Link: https://app.powerbi.com/view?r=eyJrIjoiYWQxOTcyZmItN2VkNi00ZTQyLTllYzEtMWFhOGIxYmVlOTEwIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9&pageName=ReportSection0e765c0061580b067c73
 
 - 🧾 Finance  
